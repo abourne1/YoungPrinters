@@ -62,12 +62,7 @@ def cubescad(s):
     str_s = str(s)
     t = open('cubefile.scad', 'w')
     t.truncate()
-    t.write("scale(["+str_s+","+str_s+","+str_s+"])\n")
-    t.write("polyhedron(\n")
-    t.write("points=[	[0,0,0], [1,0,0], [1,1,0], [0,1,0],\n")
-    t.write("		[0,0,1], [1,0,1], [1,1,1], [0,1,1] ],\n")
-    t.write("faces=[	[0,1,2,3], [7,6,5,4], [4,5,1,0], [6,7,3,2],\n")
-    t.write("		[5,6,2,1], [0,3,7,4]]);")
+    t.write("cube("+s+");")
     return
 
 def norm(a, b):
